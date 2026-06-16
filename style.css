@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245, 245, 199);
+    /* gap: 50%; */
+    height: 60px;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 900;
+    color:rgb(59, 38, 10);
+    margin: 0 30px;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    color: black;
+    scale: 1.1;
+}
+
+.links a{
+    display: block;
+    text-decoration: none;
+    color: rgb(59, 38, 10);
+    padding: 10px;
+    margin: 0 16px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.links a:hover{
+    color: black;
+    scale: 1.1;
+    background-color: brown;
+    border-radius: 8px;
+}
+
+.links{
+    margin: 0 50px;
+    display: flex;
+
+}
+
+.container{
+    /* width: 90%; */
+    height: 100vh;
+    /* margin: auto; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0.641);
+}
+
+.box{
+    width: 90%;
+    background-color: rgba(253, 224, 82, 0.767);
+    margin: auto;
+    border-radius: 8px;
+    height: 90%;
+}
+
+h2{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 900;
+    color: rgb(59, 38, 10);
+}
+
+p{
+    text-align: center;
+    margin: 16px 0;
+    font-weight: 700;
+    color: rgb(59, 38, 10);
+}
+
+.image-uploud{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.image-uploud h3{
+    color: rgb(59, 38, 10);
+    margin: 16px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.image-uploud input{
+    display: none;
+}
+
+.image-uploud label{
+    margin: 15px auto;
+    display: inline-block;
+    background-color: brown;
+    color: black;
+    padding: 12px ;
+    width: 50%;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.image-uploud label:hover{
+    cursor: pointer;
+    scale: 1.2;
+    background-color: rgba(165, 42, 42, 0.775);
+}
