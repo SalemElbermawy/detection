@@ -1,8 +1,15 @@
-from fastapi  import FastAPI
+from fastapi  import FastAPI,File,UploadFile
 from pydantic import BaseModel
 import pandas as pd
 import joblib
 from fastapi.middleware.cors import CORSMiddleware
+import tensorflow as tf
+import numpy as np
+from PIL import Image
+import io
+import keras
+
+model_1000=keras.models.load_model("mobilenetv2_base_model.keras")
 
 churn_model=joblib.load("churn_model.pkl")
 
@@ -52,10 +59,37 @@ def churn_predict(message:Churn):
     
     return {"response":int(prediction[0])}
 
-import sklearn
-import pandas
-import sys
 
-print(sys.executable)
-print("sklearn:", sklearn.__version__)
-print("pandas:", pandas.__version__)
+@app.post("/largeModel")
+async def largeModel(file:UploadFile = File(...)):
+    
+    content= await file.read()
+    
+    content=io.BytesIO(content)
+    
+    image=Image.open(content).convert("RGB")
+    
+    image=image.resize((224,224))
+    
+    img_array=np.array(image,dtype=np.float32)
+    
+    img_preprocessed=keras.applications.mobilenet_v2.preprocess_input(img_array)
+    
+    img_preprocessed=np.expand_dims(img_preprocessed,axis=0)
+    
+    prediction=model_1000.predict(img_preprocessed)
+    decode=keras.applications.mobilenet_v2.decode_predictions(prediction,top=1)
+    top_prediction=decode[0][0]
+    class_name=top_prediction[1]
+    
+    return {"response":class_name}
+    
+    
+
+# import sklearn
+# import pandas
+# import sys
+
+# print(sys.executable)
+# print("sklearn:", sklearn.__version__)
+# print("pandas:", pandas.__version__)

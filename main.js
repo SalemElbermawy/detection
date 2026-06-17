@@ -43,7 +43,10 @@ async function Churn(){
     const prediction= re_response.response
 
     result_box.classList.remove("hidden")
-    prediction_text.innerHTML=prediction
+    if (prediction===1){
+    prediction_text.innerHTML="Yes"}else{
+        prediction_text.innerHTML="No"
+    }
 
     }catch(error){
         console.log("error",error)
