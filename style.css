@@ -66,7 +66,10 @@ header{
     background-color: rgba(253, 224, 82, 0.767);
     margin: auto;
     border-radius: 8px;
-    height: 90%;
+    /* height: 60%; */
+    /* display: flex;
+    flex-direction: column; */
+    
 }
 
 h2{
@@ -109,7 +112,7 @@ p{
     background-color: brown;
     color: black;
     padding: 12px ;
-    width: 50%;
+    width: 25%;
     border-radius: 12px;
     font-weight: 600;
     font-size: 18px;
@@ -118,6 +121,23 @@ p{
 
 .image-uploud label:hover{
     cursor: pointer;
-    scale: 1.2;
+    scale: 1.1;
     background-color: rgba(165, 42, 42, 0.775);
+}
+
+.predictButton{
+    margin: 12px auto;
+    width: 40%;
+    padding:12px ;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    background-color: rgb(141, 87, 16);
+}
+
+.predictButton:hover{
+    cursor: pointer;
+    background-color:rgba(141, 87, 16, 0.71) ;
+    scale: 1.1;
 }
