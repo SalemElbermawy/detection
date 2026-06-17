@@ -41,7 +41,7 @@ app.add_middleware(
     
 )
 
-@app.post("/churn/")
+@app.post("/churn")
 def churn_predict(message:Churn):
     
     message=dict(message)
