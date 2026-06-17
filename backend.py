@@ -41,7 +41,7 @@ app.add_middleware(
     
 )
 
-@app.post("churn/")
+@app.post("/churn/")
 def churn_predict(message:Churn):
     
     message=dict(message)
@@ -52,3 +52,10 @@ def churn_predict(message:Churn):
     
     return {"response":int(prediction[0])}
 
+import sklearn
+import pandas
+import sys
+
+print(sys.executable)
+print("sklearn:", sklearn.__version__)
+print("pandas:", pandas.__version__)

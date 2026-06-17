@@ -141,3 +141,24 @@ p{
     background-color:rgba(141, 87, 16, 0.71) ;
     scale: 1.1;
 }
+
+.result{
+    background-color: rgb(218, 193, 95);
+    width: 30%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.result h3{
+    margin: 0 0;
+}
+.result h4{
+    color: brown;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.hidden{
+    display: none;
+}
