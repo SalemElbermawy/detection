@@ -9,6 +9,18 @@
     flex-direction: column;
 }
 
+.container-churn{
+    /* width: 90%; */
+    /* height: 100vh; */
+    /* margin: auto; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0.641);
+}
+
 .group{
     display: flex;
     text-align: center;
