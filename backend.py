@@ -9,7 +9,7 @@ from PIL import Image
 import io
 import keras
 
-model_1000=keras.models.load_model("mobilenetv2_base_model.keras")
+model_1000 = tf.keras.applications.MobileNetV2(weights="imagenet")
 
 churn_model=joblib.load("churn_model.pkl")
 
