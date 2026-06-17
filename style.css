@@ -51,7 +51,7 @@ header{
 
 .container{
     /* width: 90%; */
-    height: 100vh;
+    /* height: 100vh; */
     /* margin: auto; */
     /* align-items: center; */
     display: flex;
@@ -64,7 +64,7 @@ header{
 .box{
     width: 90%;
     background-color: rgba(253, 224, 82, 0.767);
-    margin: auto;
+    margin: 20px auto;
     border-radius: 8px;
     /* height: 60%; */
     /* display: flex;

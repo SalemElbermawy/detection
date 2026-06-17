@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churn Detection</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_churn.css">
 </head>
 <body>
 
@@ -26,6 +27,7 @@
         <div class="box">
             <h2>Churn Detection</h2>
             <p>Enter the values of customer</p>
+
             <form id="formChurn">
 
                 <div class="box-form">
@@ -36,13 +38,13 @@
                             <label for="gender">Gender</label>
                             <select  id="gender" required>
                                 <option value="Maler">Male</option>
-                                <option value="Female"></option>
+                                <option value="Female">Female</option>
                             </select>
                         </div>
 
                         <div class="row">
                             <label for="SeniorCitizen">SeniorCitizen</label>
-                            <select  id="SeniorCitizen">
+                            <select  id="SeniorCitizen" required>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                             </select>
@@ -52,8 +54,167 @@
 
                     <div class="group">
 
-                        
+                        <div class="row">
+                            <label for="Partner">
+                                Partner
+                            </label>
 
+                            <select  id="Partner" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+
+                        </div>
+
+                        <div class="row">
+                            <label for="Dependents">Dependents</label>
+                            <select  id="Dependents" required>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="group">
+
+                        <div class="row">
+                            <label for="tenure">Tenure</label>
+                            <input type="number" required step="any" id="tenure">
+                        </div>
+
+                        <div class="row">
+                            <label for="PhoneService">PhoneService</label>
+
+                            <select  id="PhoneService">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="group">
+
+                        <div class="row">
+                            <label for="MultipleLines">MultipleLines</label>
+                            <select  id="MultipleLines" required>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No phone service">No phone service</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label for="InternetService">InternetService</label>
+                            <select  id="InternetService">
+                                <option value="No">No</option>
+                                <option value="DSL">DSL</option>
+                                <option value="Fiber optic">Fiber optic</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="group">
+
+                        <div class="row">
+                            <label for="OnlineSecurity">Online Security</label>
+                            
+                            <select  id="OnlineSecurity" required>
+                                <option value="No internet service">No internet service</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        
+                        </div>
+
+                        <div class="row">
+                            <label for="DeviceProtection">DeviceProtection</label>
+                            <select id="DeviceProtection">
+                                <option value="No internet service">No internet service</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="group">
+
+                        <div class="row">
+                            <label for="TechSupport">Tech Support</label>
+                            <select  id="TechSupport">
+                                <option value="No internet service">No internet service</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label for="StreamingTV">Streaming TV</label>
+                            <select  id="StreamingTV">
+                                <option value="No internet service">No internet service</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                    <div class="group">
+
+                        <div class="row">
+                            <label for="StreamingMovies">Streaming Movies</label>
+                            <select id="StreamingMovies">
+                                <option value="No internet service">No internet service</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label for="Contract">Contract</label>
+                            <select  id="Contract" required>
+                                <option value="Month-to-month">Month-to-month</option>
+                                <option value="One year">One Year</option>
+                                <option value="Two year">Two year</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="group">
+                        <div class="row">
+                            <label for="PaymentMethod">Payment Method</label>
+                            <select name="" id="PaymentMethod">
+                                <option value="Electronic check">Electronic Check</option>
+                                <option value="Mailed check">Mailed check</option>
+                                <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                                <option value="Credit card (automatic)">Credit card (automatic)</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label for="PaperlessBilling">Paperless Billing</label>
+                            <select name="" id="PaperlessBilling">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="row">
+                            <label for="MonthlyCharges">Monthly Charges</label>
+                            <input type="number" step="any" required id="MonthlyCharges">
+                        </div>
+
+                        <div class="row">
+                            <label for="TotalCharges">Total Charges</label>
+                            <input type="number" id="TotalCharges" step="any" required>
+                        </div>
                     </div>
 
                 </div>
