@@ -4,3 +4,7 @@ tensorflow
 keras
 pillow
 python-multipart
+pandas
+numpy
+PIL
+io
