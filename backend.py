@@ -92,7 +92,7 @@ async def flowerModel(file:UploadFile = File(...)):
     
     flower_label=["roses","daisy","dendelion","sunflowers","tulips"]
     
-    file=file.read
+    file= await file.read()
     
     content_file=io.BytesIO(file)
     

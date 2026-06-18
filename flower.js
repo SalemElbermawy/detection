@@ -29,6 +29,21 @@ async function sendImage (){
 
     const imageInput = document.getElementById("imageInput")
 
-    
+    const formData = new FormData();
+
+    formData.append("file",imageInput.files[0])
+
+    const response = await fetch(floweUrl,{
+        method:"POST",
+        body:formData
+    })
+
+    const re_response= await response.json()
+
+    const finalResponse= re_response.response;
+
+    resultBox.classList.remove("hidden")
+
+    predictionText.innerHTML=finalResponse
     
 } 
