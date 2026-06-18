@@ -2,9 +2,8 @@ fastapi
 uvicorn[standard]
 tensorflow
 keras
-pillow
 python-multipart
 pandas
 numpy
-PIL
-io
+pillow
+joblib

@@ -24,6 +24,8 @@ imageInput.addEventListener("change",
 )
 
 async function sendImage(){
+
+    try{
     const imageInput = document.getElementById("imageInput");
 
     const predictionText = document.querySelector(".prediction");
@@ -43,5 +45,8 @@ async function sendImage(){
 
     resultBox.classList.remove("hidden");
 
-    predictionText.innerHTML = data.response  
+    predictionText.innerHTML = data.response 
+}catch(error){
+    alert("Error In Server !!")
+} 
 }

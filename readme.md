@@ -69,3 +69,24 @@ common newt]
 
 # Screen Shots
 
+- this is the normal state
+
+![alt text](image-1.png)
+
+- when you upload the image
+
+![alt text](image.png)
+
+- the churn form
+
+![alt text](image-2.png)
+
+- the churn prediction
+
+![alt text](image-3.png)
+
+- flower model
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)

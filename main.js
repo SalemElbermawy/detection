@@ -1,6 +1,6 @@
 churnUrl="http://127.0.0.1:8000/churn"
 
-
+const myForm = document.getElementById("formChurn")
 
 async function Churn(){
 
@@ -50,8 +50,16 @@ async function Churn(){
 
     }catch(error){
         console.log("error",error)
+        alert("Error In Server !!")
     }
 
 }
 
-document.getElementById("final-btn").addEventListener("click",Churn)
+document.getElementById("final-btn").addEventListener("click",async function(){
+    
+if (!myForm.checkValidity()) {
+        myForm.reportValidity(); 
+        return; 
+    }
+    await Churn  ()
+})
