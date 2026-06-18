@@ -9,7 +9,9 @@ from PIL import Image
 import io
 import keras
 
-model_1000 = tf.keras.applications.MobileNetV2(weights="imagenet")
+model_1000 = keras.applications.MobileNetV2(weights="imagenet")
+
+flower_model=keras.models.load_model("flowers_transfer_model.keras")
 
 churn_model=joblib.load("churn_model.pkl")
 
@@ -83,6 +85,31 @@ async def largeModel(file:UploadFile = File(...)):
     class_name=top_prediction[1]
     
     return {"response":class_name}
+    
+@app.post("/flowerModel")
+
+async def flowerModel(file:UploadFile = File(...)):
+    
+    flower_label=["roses","daisy","dendelion","sunflowers","tulips"]
+    
+    file=file.read
+    
+    content_file=io.BytesIO(file)
+    
+    image=Image.open(content_file).convert("RGB")
+    
+    image=image.resize((224,224))
+    
+    image_array=np.array(image,np.float32)
+    
+    image_preprocess=keras.applications.mobilenet_v2.preprocess_input(image_array)
+    
+    image_preprocess=np.expand_dims(image_preprocess,axis=0)    
+    
+    predict=flower_model.predict(image_preprocess)
+    prediction_label=flower_label[np.argmax(predict)]
+    
+    return {"response":prediction_label}
     
     
 
