@@ -1,4 +1,4 @@
-churnUrl="http://127.0.0.1:8000/churn"
+churnUrl="https://salemelbe-detection.hf.space/churn"
 
 const myForm = document.getElementById("formChurn")
 

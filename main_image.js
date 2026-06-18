@@ -1,4 +1,4 @@
-globalUrl="http://127.0.0.1:8000/largeModel"
+globalUrl="https://salemelbe-detection.hf.space/largeModel"
 
 
 const imageInput = document.getElementById("imageInput");

@@ -1,4 +1,4 @@
-floweUrl="http://127.0.0.1:8000/flowerModel"
+floweUrl="https://salemelbe-detection.hf.space/flowerModel"
 
 
 imageInput=document.getElementById("imageInput")
