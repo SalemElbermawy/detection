@@ -1,5 +1,25 @@
 # Detectio Project
 
+A full stack website that consist of combinations of different models  (big three models in one place), this allows for any user to detect images of 1000 different classes and if you want what classes this model can detect look at the "labels.txt". predict customer churn and the type of flowers,too.
+
+## Demo
+
+- Backend : hosted in hugging face
+- fron end (demo) : https://salemelbermawy.github.io/detection/
+
+### Tech Stack
+
+- Machine Learning : Tensor-flow, keras, scikit-learn, openCV (cv2)
+- BackEnd: FASTAPI, hosted on hugging face
+- front-end: HTML, CSS, Js
+
+### Installation 
+
+- Clone the repo
+- Install required packages
+
+# Describe
+
 ### Content
 
 - Main Pages
@@ -39,6 +59,7 @@ great grey owl
 European fire salamander
 common newt]
 - if you want to see all 1000 class you can open "labels.txt"
+
 ### Second Page
 
 - It is a form to detect the churn and this data i get it from kaggle to train it on deep learning model use Dense Layers
