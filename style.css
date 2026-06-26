@@ -174,3 +174,9 @@ p{
     margin: auto;
     border-radius: 5px;
 }
+
+.prediction{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(165, 42, 42, 0.253);
+}
