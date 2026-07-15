@@ -7,6 +7,13 @@ A full stack website that consist of combinations of different models  (big thre
 - Backend : hosted in hugging face
 - fron end (demo) : https://salemelbermawy.github.io/detection/
 
+## How to use
+
+- in the first model you can look at label.txt and choose image like gold fish and upload it to see the detection and this model not accurate 100% you should try more than three photos
+- the second one is the model to detect if the customer will leave the company or not
+- the last one is classify the image of flower if it is sunflower, tulips, rose
+
+
 ### Tech Stack
 
 - Machine Learning : Tensor-flow, keras, scikit-learn, openCV (cv2)
